@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  youtrack:
+    image: lagun4ik/youtrack:2017.3.36019
+    restart: always
+    volumes:
+      - ./data/data/:/opt/youtrack/data/
+      - ./data/backup/:/opt/youtrack/backup/
+    environment:
+      - Xms=512m
+      - Xmx=1g
+    logging:
+      driver: json-file
+      options:
+        max-size: 100m
