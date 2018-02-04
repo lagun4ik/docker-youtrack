@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 MAINTAINER ivan@lagunovsky.com
 
@@ -19,7 +19,7 @@ RUN chmod +x /usr/local/bin/youtrack-start && \
 ENV JAVA_VERSION=8.151.12-r0
 RUN apk add --update --no-cache openjdk8-jre=${JAVA_VERSION}
 
-ENV YOUTRACK_VERSION=2017.4.38030
+ENV YOUTRACK_VERSION=2017.4.39083
 RUN wget https://download.jetbrains.com/charisma/youtrack-${YOUTRACK_VERSION}.jar -O /opt/youtrack/bin/youtrack.jar
 
 EXPOSE 80/tcp
