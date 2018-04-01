@@ -16,10 +16,10 @@ RUN chmod +x /usr/local/bin/youtrack-start && \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk add --update --no-cache wget bash
 
-ENV JAVA_VERSION=8.151.12-r0
+ENV JAVA_VERSION=8.161.12-r0
 RUN apk add --update --no-cache openjdk8-jre=${JAVA_VERSION}
 
-ENV YOUTRACK_VERSION=2017.4.39083
+ENV YOUTRACK_VERSION=2018.1.40341
 RUN wget https://download.jetbrains.com/charisma/youtrack-${YOUTRACK_VERSION}.jar -O /opt/youtrack/bin/youtrack.jar
 
 EXPOSE 80/tcp
