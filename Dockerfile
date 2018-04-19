@@ -19,7 +19,7 @@ RUN chmod +x /usr/local/bin/youtrack-start && \
 ENV JAVA_VERSION=8.161.12-r0
 RUN apk add --update --no-cache openjdk8-jre=${JAVA_VERSION}
 
-ENV YOUTRACK_VERSION=2018.1.40341
+ENV YOUTRACK_VERSION=2018.1.40840
 RUN wget https://download.jetbrains.com/charisma/youtrack-${YOUTRACK_VERSION}.jar -O /opt/youtrack/bin/youtrack.jar
 
 EXPOSE 80/tcp
